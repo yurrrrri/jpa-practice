@@ -15,15 +15,6 @@ public class HelloApplication {
         tx.begin();
 
         try {
-            Team team = new Team();
-            team.setName("TeamA");
-            em.persist(team);
-
-            Member member = new Member();
-            member.setUsername("member1");
-            member.changeTeam(team);
-
-            em.persist(member);
 
             tx.commit();
         } catch (Exception e) {
