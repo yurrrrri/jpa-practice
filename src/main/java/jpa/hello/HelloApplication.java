@@ -16,6 +16,12 @@ public class HelloApplication {
 
         try {
 
+            Book book = new Book();
+            book.setName("Book");
+            book.setAuthor("Author");
+
+            em.persist(book);
+
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
